@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Reporte Tecnico sobre proyecto Hopfield}
+\author{Salvador Vega Villegas }
+\date{March 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduccion}
+El proyecto de clase Hopfield, lo realice con un patrones que representan 7 operadores matemáticos dentro de matrices de 7x7, utilizando el codigo que el profesor nos mostró en las clases.
+
+
+
+
+Me es muy interesante como este pequeño proyecto puede escalar, ya que lo podemos aplicar de muchas otras maneras, por ejemplo una imagen, donde en la matriz estaran los píxeles de la imagen y podemos comparar imágenes a partir de los píxeles para encontrar personas en fotografías, entre otras cosas.
+
+
+
+
+A continuacion voy a presentar el desarrollo de mi proyecto hecho en matlab
+ 
+\section{Desarrollo}
+
+Durante la realización del proyecto, yo elegí como tema los operadores aritméticos, aplicando la formula:
+
+7x7=49 
+
+49x0.15
+
+=7.35
+
+7x7 significa el tamaño de la matriz que use para representar los operadores matemáticos
+
+La formula anterior fue la que utilice y la proporcionada por el profesor para saber cuantas figuras eran las que el programa podría reconocer de manera eficiente, ya que si incluía mas operadores matemáticos era posible que el programa no fuera capaz de reconocer todos.
+
+
+Dentro de la matriz represente los operadores aritméticos con u numero "1" para formar la figura de operador aritmético, después rellene los demás espacios con "-1" para completar los espacios vacíos.
+
+En total fueron 7 figuras que realice:
+
+1. el signo de suma
+
+2. el signo de resta
+
+3. el signo de división
+
+4. el signo de exponente
+
+5. el signo de raíz cuadrada
+
+6. el signo de multiplicación
+
+7. el signo de igual
+
+El proceso para obtener el resultado es haciendo las operaciones con las matrices, primero escribí todas las matrices en matlab, después la multiplico por si mismas y se suman;se obtiene su diagonal, después se ingresa la matriz a buscar.
+
+Después se inserta en un ciclo, donde se recorre la matriz y se compara para ver si es igual a la otra matriz.
+
+Una vez terminado el proceso deberá salir un mensaje de "encontrado".
+
+
+Hice las correspondientes pruebas con las diferentes figuras de operadores matemáticos y el resultado fue completado con éxito.
+
+
+
+
+
+\section{Conclusión}
+
+Después de haber concluido las distintas pruebas del proyecto con éxito, puedo decir que este proyecto fue de gran utilidad, ya que pude ver las grandes aplicaciones que puede tener en el futuro, junto la red neuronal es una gran aplicación que se puede generar para grandes proyectos.
+
+
+De momento me quedo muy satisfecho, ya que se logro el objetivo de este proyecto lo pude realizar de manera correcta con las figuras que diseñe.
+
+
+\end{document}
