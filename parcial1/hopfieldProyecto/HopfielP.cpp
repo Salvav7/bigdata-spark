@@ -18,13 +18,13 @@ void printw(int **W, int N)
   }
 }
 
-void weigths(int **W, int *x0, int *x1, int *x2, int *x3, int N)
+void weigths(int **W, int *x0, int *x1, int *x2, int *x3, int *x4, int *x5, int *x6, int N)
 {
 
   for (int i=0; i<N; i++)
   for (int j=0; j<N; j++)
   {
-    W[i][j] = x0[i]*x0[j] + x1[i]*x1[j] + x2[i]*x2[j] + x3[i]*x3[j];
+    W[i][j] = x0[i]*x0[j] + x1[i]*x1[j] + x2[i]*x2[j] + x3[i]*x3[j] + x4[i]*x4[j] + x5[i]*x5[j] + x6[i]*x6[j]  ;
   }
   for (int k=0; k<N; k++)
     W[k][k]=0;
@@ -79,16 +79,18 @@ int check(int *v1, int *v2, int N)
 int readfile(string file, int *v1, int col, int N)
 {
     std::ifstream infile(file);
-    int a1, a2, a3, a4, a5;
+    int a1, a2, a3, a4, a5, a6, a7;
     int row=0;
 
-    while(infile >> a1 >> a2 >> a3 >> a4 >> a5 ) {
-        std::cout << a1 << a2 << a3 << a4 << a5 << endl;
+    while(infile >> a1 >> a2 >> a3 >> a4  >> a5 >> a6 >> a7 ) {
+        std::cout << a1 << a2 << a3 << a4 << a5 << a6 << a7 << endl;
         v1[(row*col) + 0] = a1;
         v1[(row*col) + 1] = a2;
         v1[(row*col) + 2] = a3;
         v1[(row*col) + 3] = a4;
         v1[(row*col) + 4] = a5;
+        v1[(row*col) + 5] = a6;
+        v1[(row*col) + 6] = a7;
         row++;
    }
 
@@ -107,19 +109,25 @@ int readfile(string file, int *v1, int col, int N)
 
 int main(void)
 {
-  int N = 40;
-  int col = 5;
+  int N = 49;
+  int col = 7;
   int *x0 = new int[N];
   int *x1 = new int[N];
   int *x2 = new int[N];
   int *x3 = new int[N];
+  int *x4 = new int[N];
+  int *x5 = new int[N];
+  int *x6 = new int[N];
 
   cout << "iterations " << endl;
 
-  readfile("1.txt", x0,  col, N);
-  readfile("2.txt", x1,  col, N);
-  readfile("3.txt", x2,  col, N);
-  readfile("4.txt", x3,  col, N);
+  readfile("Division.txt", x0,  col, N);
+  readfile("Exponente.txt", x1,  col, N);
+  readfile("Igual.txt", x2,  col, N);
+  readfile("Multiplicacion.txt", x3,  col, N);
+  readfile("Raiz.txt", x4,  col, N);
+  readfile("Resta.txt", x5,  col, N);
+  readfile("Suma.txt", x6,  col, N);
 
   // pattern 0
 /*  x0[0] = 1;
@@ -145,12 +153,12 @@ int main(void)
     for (int j=0; j<N; j++)
       W[i][j]=0;
 
-  weigths(W, x0, x1, x2, x3, N);
+  weigths(W, x0, x1, x2, x3, x4, x5, x6, N);
   printw(W, N);
 
   int *s = new int[N]; // allocation memory for s
 
-  readfile("x1.txt", s,  col, N);
+  readfile("xsuma.txt", s,  col, N);
 
   // start configuration
 /*  s[0] = -1;
