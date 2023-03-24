@@ -121,6 +121,17 @@ int main(void)
 
   cout << "iterations " << endl;
 
+  readfile("Division.txt", x0,  col, N);
+  readfile("Exponente.txt", x1,  col, N);
+  readfile("Igual.txt", x2,  col, N);
+  readfile("Multiplicacion.txt", x3,  col, N);
+  readfile("Raiz.txt", x4,  col, N);
+  readfile("Resta.txt", x5,  col, N);
+  readfile("Suma.txt", x6,  col, N);
+
+
+
+
 
 
   // pattern 0
